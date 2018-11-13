@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link href='pizzaStyles.css' rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>pizza party</title>
+
+</head>
+
+<body>
+    <div>
+        <h1> Party Pizza</h1>
+
+        <div>
+            <div class="PizzaBackground"></div>
+            <div id="PizzaSliceYellow" class="hold">
+                <div class="Pizza"></div>
+            </div>
+            <div id="PizzaSliceBlue" class="hold">
+                <div class="Pizza"></div>
+            </div>
+            <div id="PizzaSliceRed" class="hold">
+                <div class="Pizza"></div>
+            </div>
+            <div id="PizzaSliceOlive" class="hold">
+                <div class="Pizza"></div>
+            </div>
+            <div id="PizzaSlicePurple" class="hold">
+                <div class="Pizza"></div>
+            </div>
+            <div id="PizzaSliceGreen" class="hold">
+                <div class="Pizza"></div>
+            </div>
+        </div>
+        <div id='forForm'>
+
+            <form action="post" name="pizzaOrder">
+                <h3>Buld your Feast</h3>
+                <p>
+                    <strong>Choose size:</strong>
+                </p>
+                <p>
+                    <input type="radio" name='size' class='inline' value ='4.99'> small - $4.99 &nbsp
+                    <input type="radio" name='size' class='inline' value ='6.99'> medium - $6.99&nbsp
+                    <input type="radio" name='size' class='inline' value = '8.99'> large - $8.99&nbsp
+                    <p>
+                        <strong>Select extra toppings:</strong>
+                    </p>
+                    <input type="checkbox" name="mushrooms" id="ingr" class="inline" value ='0.20' /> MUSHROOMS - add 20 extra</br>
+                    <input type="checkbox" name="olives" id="ingr" class="inline" value ='0.20'/> OLIVES - add $.20 extra</br>
+                    <input type="checkbox" name="bacon" id="ingr" class="inline" value ='1.00' /> BACON - add $1.00 extra</br>
+                    <input type="checkbox" name="extraCheese" id="ingr" class="inline" value ='0.20'/> EXTRA CHEESE - add $.20 extra</br>
+                    <input type="checkbox" name="FreshTomatoes" id="ingr" class="inline" value = '0.20' /> FRESH TOMATOES- add $.20 extra</br>
+
+                    <p>
+                        <strong>How many pizzas would you like to order:</strong>
+                        <br/>
+                        <span style='font-size: 0.8em;'>(contact us for order larger than 10 pizzas)</span>
+                    </p>
+                    <input type="number" name="items" id="" value="1" min="1" max="10">
+                    <br/>
+                    <h3 id="totalField">total: $0.00</h3>
+                    <strong>DELIVERY ADDRESS:</strong>
+
+                    <input type="text" name="streetAddress" placeholder='Street Address' required='true' />
+                    <br/>
+                    <input type="text" name="USCity" placeholder='City' required/>
+                    <br/>
+                    <input type="text" name="State" placeholder='State' required/>
+                    <br/>
+                    <input type="text" name="zipcode" placeholder="Zipcode" pattern="[0-9]{5}" required='true' />
+                    <br/>
+                    <strong>Phone number:</strong>
+                    <input type="text" name="phoneNumber" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="000-000-0000" name="" id="" required/>
+                    <button type="reset">clear all fields</button>
+                    <button type="submit">submit order</button>
+            </form>
+
+            <div id='endspace'>
+                <strong>warning message about the fact that something is wrong</strong>
+            </div>
+            <div id="footer">
+            </div>
+            <script src='scripts.js'></script>
+</body>
+
+</html>

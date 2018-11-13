@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Order Your Pizza</title>
+    <link href='styles.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <form action="start.htm" name="orderPizza" method="post">
+        <fieldset>
+            <legend>Build your pizza:</legend>
+            <strong>size:</strong>
+            <br>
+            <input type="radio" name="pizzaSize" value="small">small</input>
+            <input type="radio" name="pizzaSize" value="medium">medium</input>
+            <input type="radio" name="pizzaSize" value="large">large</input>
+            <br>
+            <br>
+            <strong>toppings:</strong>
+            <br>
+            <input type="checkbox" name="topping" class="inline" value='mushrooms' /> MUSHROOMS - $2</br>
+            <input type="checkbox" name="topping" class="inline" value='olives' /> OLIVES - $2 </br>
+            <input type="checkbox" name="topping" class="inline" value='bacon' /> BACON - $1 </br>
+            <input type="checkbox" name="topping" class="inline" value='broccoli' /> BROCCOLI - $2 </br>
+            <input type="checkbox" name="topping" class="inline" value='tomatoes' /> TOMATOES- $2 </br>
+            <strong>number of pizzas:</strong>
+            <br>
+            <input type="text" name="numPizza" id=""  value="1">
+            <br> Total price:
+            <span>$</span>
+            <span id="total">0
+            </span>
+            <br>
+            <div>
+                <button type="reset" onclick="javascript:document.getElementById('total').innerHTML=0">clear all choices</button>
+            </div>
+            <br>
+            <strong>DELIVERY ADDRESS:</strong>
+            <br>
+            <input type="text" name="streetAddress" placeholder='Street Address' required='true' />
+            <br/>
+            <input type="text" name="USCity" placeholder='City' required/>
+            <br/>
+            <input type="text" name="State" placeholder='State' required/>
+            <br/>
+            <input type="text" name="zipcode" placeholder="Zipcode" pattern="[0-9]{5}" required='true' />
+            <br/>
+            <strong>Phone number:</strong>
+            <br>
+            <input type="text" name="phoneNumber" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="000-000-0000" name="" id="" required/>
+            <br>
+            <div>
+                <button type="submit">submit order</button>
+            </div>
+        </fieldset>
+
+    </form>
+    <script src='scripts.js'></script>
+</body>
+
+</html>
